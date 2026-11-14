@@ -4,7 +4,11 @@ class Employee:
         self.salary = salary
 
     def up(self, amount):
-        self.salary += amount
+    if amount <= 0:
+        print("Сумма повышения должна быть положительной")
+        return
+
+    self.salary += amount
 
     def print_(self):
         print(f"Сотрудник {self.name}, зарплата {self.salary}")
